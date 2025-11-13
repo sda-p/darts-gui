@@ -1,0 +1,41 @@
+.intro-root {
+    position: fixed;
+    inset: 0;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.intro-text {
+    position: absolute;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    opacity: 0;
+}
+@keyframes intro-fade-out {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+.intro-fade {
+    animation: intro-fade-out 1s forwards;
+}
+@keyframes fade-seq-1 {
+    0% { opacity: 0; }
+    5% { opacity: 1; }
+    35% { opacity: 1; }
+    40% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 0; }
+}
+@keyframes fade-seq-2 {
+    0% { opacity: 0; }
+    40% { opacity: 0; }
+    55% { opacity: 0; }
+    75% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { opacity: 0; }
+}
+.ready .text1 { animation: fade-seq-1 6s forwards; }
+.ready .text2 { animation: fade-seq-2 6s forwards; }
+
